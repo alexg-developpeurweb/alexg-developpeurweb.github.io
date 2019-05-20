@@ -18351,7 +18351,7 @@ function loading() {
 		//as the progress bar width updates and grows we put the percentage loaded in the screen
 		var progressUpdate = function progressUpdate() {
 			//the percentage loaded based on the tween's progress
-			loadingProgress = Math.round(progressTl.progress() * 100);
+			loadingProgress = Math.round(progressTl.progress() * 100) + ' %';
 
 			//we put the percentage in the screen
 			$(".txt-perc").text(loadingProgress);
