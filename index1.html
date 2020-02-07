@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+ 
+<head>
+		
+		<meta charset="utf-8" />
+		<title>AlexG - Développeur web</title>
+		<meta name="Description" content="Développeur web, certifié #PHP, #MySQL, #Bootstrap. Spécialisé dans la création d'application web, intranet..">
+		<META name="Keywords" content="developpeur, web , PHP , MySQL, Amiens, code, developer, Application">
+
+		<!-- Twitter Card data -->
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:site" content="@alexgwebdev">
+		<meta name="twitter:title" content="AlexG - Développeur web">
+		<meta name="twitter:description" content="Développeur web, certifié #PHP, #MySQL, #Bootstrap. Spécialisé dans la création d'application web, intranet..">
+		<meta name="twitter:creator" content="@alexgwebdev">
+
+		<meta name="twitter:image" content="public/images/twitter.png">
+ 
+
+		<link rel="home" href="index.html" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+									
+		<link href="public/css/main.min.css" rel="stylesheet">
+
+		<style>
+
+			
+body{
+ 
+	background-color: #ffff;
+	 
+}
+a {
+	cursor: pointer;
+}
+a:hover {
+	text-decoration: none;
+}
+
+	/*	
+.cursor,
+.cursor2,
+.cursor3{
+	position: fixed;
+	border-radius: 50%;	
+	transform: translateX(-50%) translateY(-50%);
+	pointer-events: none;
+	left: -100px;
+	top: 50%;
+	mix-blend-mode: difference;
+	-webkit-transition: all 300ms linear;
+	transition: all 300ms linear;
+}
+.cursor{
+	background-color: #fff;
+	height: 0;
+	width: 0;
+	z-index: 99999;
+}
+.cursor2,.cursor3{
+	height: 36px;
+	width: 36px;
+	z-index:99998;
+	-webkit-transition:all 0.3s ease-out;
+	transition:all 0.3s ease-out
+}
+.cursor2.hover,
+.cursor3.hover{
+	-webkit-transform:scale(2) translateX(-25%) translateY(-25%);
+	transform:scale(2) translateX(-25%) translateY(-25%);
+	border:none
+}
+.cursor2{
+	border: 2px solid #fff;
+	box-shadow: 0 0 22px rgba(255, 255, 255, 0.6);
+}
+.cursor2.hover{
+	background: rgba(255,255,255,1);
+	box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+}
+
+@media screen and (max-width: 1200px){
+	.cursor,.cursor2,.cursor3{
+		display: none
+	}
+}
+
+@media screen and (max-width: 600px){
+	.switch-wrap{
+		display: none
+	}
+}
+*/
+.switch-wrap {
+	position: absolute;
+	top: 5%;
+	right: 0;
+	z-index: 10;
+    transform: translateY(-50%);
+	width: 10%;
+	-webkit-transition: all 500ms linear;
+	transition: all 500ms linear; 
+	margin: 0 auto;
+	text-align: center;
+	 
+}
+.switch-wrap h1 {
+	font-weight: 900;
+	font-size: 46px;
+	line-height: 1;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 40px;
+	-webkit-transition: all 300ms linear;
+	transition: all 300ms linear; 
+}
+@media screen and (max-width: 580px){
+  .switch-wrap h1 {
+    font-size: 32px;
+  }
+}
+.switch-wrap p {
+	font-weight: 600;
+	font-size: 14px;
+	letter-spacing: 1px;
+	line-height: 1;
+	color: #000;
+	text-align: center;
+	margin-top: 15px;
+}
+.switch-wrap p span {
+	position: relative;
+}
+.switch-wrap p span:before {
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 2px;
+	background-color: #fff;
+	left: 0;
+	bottom: -4px;
+	-webkit-transition: all 300ms linear;
+	transition: all 300ms linear; 
+}
+.switch-wrap p span:nth-child(2):before {
+	opacity: 0;
+}
+#switch,
+#circle {
+	cursor: pointer;
+	-webkit-transition: all 300ms linear;
+	transition: all 300ms linear; 
+} 
+#switch {
+	width: 60px;
+	height: 8px;
+	margin: 0 auto;
+	text-align: center;
+	border: 2px solid #000;
+	border-radius: 27px;
+	background: #000;
+	position: relative;
+	display: inline-block;
+}
+#circle {
+	position: absolute;
+	top: -11px;
+	left: -13px;
+	width: 26px;
+	height: 26px;
+	border-radius: 50%;
+	box-shadow: 0 4px 4px rgba(26,53,71,0.25), 0 0 0 1px rgba(26,53,71,0.07);
+	background: #000;
+}
+.switched {
+	border-color: #fff !important;
+	background: #fff !important;
+}
+.switched #circle {
+	left: 43px;
+	background: #fff;
+}
+
+/* #Light
+================================================== */
+
+body.light{
+	background-color: #1f2029;
+}
+body.light .cursor,
+body.light .cursor2,
+body.light .cursor3{
+	mix-blend-mode: normal;
+}
+body.light .cursor2{
+	border: 2px solid #fff;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+body.light .cursor2.hover{
+	background: rgba(255, 255, 255, 0.06);
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+	border-color: transparent;
+}
+body.light .logo-wrap a {
+	color: #fff;
+}
+body.light h1{
+	color: #fff;
+}
+body.light h2{
+	color: #fff;
+}
+body.light p{
+	color: rgb(194, 194, 194);
+}
+body.light .menu-icon__line {
+	background-color: #fff;
+}
+body.light .nav:before {
+	background: rgba(235, 235, 235,0.6);
+}
+body.light .nav:after {
+	background: rgba(250,250,250,1);
+}
+body.light .nav__list-item a{ 
+	color: rgba(255, 255, 255, 0.6); 
+}
+body.light .nav__list-item a:hover{
+	color: #fff;
+}
+body.light .nav__list-item.active-nav a{
+	color: #fff;
+}
+body.light .switch-wrap h1 {
+	color: #fff;
+}
+body.light .switch-wrap p span:nth-child(2):before {
+	opacity: 1;
+	background-color: #fff;
+}
+body.light .switch-wrap p span:nth-child(1):before {
+	opacity: 0;
+}
+
+ 
+		
+		</style>
+
+	</head>
+<body data-state='homepage' class='homepage loading'>
+
+		<!-- Cursor -->
+		<div class='cursor' id="cursor"></div>
+		<div class='cursor2' id="cursor2"></div>
+		<div class='cursor3' id="cursor3"></div>
+
+		<!-- switcher theme -->
+		<div style="  float:right">	
+				<div class="switch-wrap">
+					<div id="switch" class="hover-target">
+						<div id="circle"></div>
+					</div>
+					<!-- <p><span>☀️</span> - <span>🌙</span></p> -->
+				</div>
+			</div>	
+
+
+
+		<div id="universe">
+		<main id="content" role="main">
+    		<div class="page-header">
+			<div class="content">
+				<h1>AlexG Développeur web</h1>
+				<p class="sub-header">
+					Développeur web, certifié #PHP, #MySQL, #Bootstrap*.  
+				</p>
+			</div>
+		</div>	
+		<div class="fake-holder">
+			
+			<div class="affix">
+				<section class="project-section">
+					<div class="section-title">Selected Work</div>
+				 
+							<div class="projects clear">
+
+
+									<div class="project black" style="background-color: #dfe1f4">
+											<a href="app_center_developer/changelog.html" target="_blank" rel="no_follow"></a>
+											<img class="product full" src="images/large/acd.png" />
+											
+											<div class="text">
+												<h3 >App Center Developer</h3>
+												<p class="motto">Dashboard gestion des projets sur votre localhost + gestion Git .</p>
+											</div>
+											<div class="services">
+												#PHP #VueJS <br>Bêta</div>
+										</div>	
+
+									<div class="project black" style="background-color: #f3e7e0">
+											<!-- <a href="#" target="_blank" rel="no_follow"></a> -->
+											<img class="product full" src="images/large/deviseur.png" />
+											
+											<div class="text">
+												<h3 >Deviseur</h3>
+												<p class="motto">Application deviseur de Maison Individuel Simulation Tarifaire Automatique.</p>
+											</div>
+											<div class="services">
+												#PHP #VueJS #MySQL<br>En cours de développement</div>
+										</div>					 
+													
+
+									<div class="project black" style="background-color: #f0ffea">
+											<!-- <a href="#" target="_blank" rel="no_follow"></a> -->
+											<img class="product full" src="images/large/calendar.png" />
+											
+											<div class="text">
+												<h3 >Calendrier</h3>
+												<p class="motto">Application de gestion de planning.</p>
+											</div>
+											<div class="services">
+												#PHP #VueJS<br>En production</div>
+										</div>
+											 
+										<div class="project black" style="background-color: #eaf8ff">
+											<!-- <a href="#" target="_blank" rel="no_follow"></a> -->
+											<img class="product full" src="images/large/schema_db.png" />
+											
+											<div class="text">
+												<h3 >Schéma base de donnée</h3>
+												<p class="motto">Créer un schéma de votre base de donnée facilement.</p>
+											</div>
+											<div class="services">
+												 #VueJS<br>En production<br><a href="https://inspiredb.github.io/">Site web</a></div>
+										</div>
+
+
+												 
+											</div>
+				</section>
+
+				<section class="bio">
+					<div class="section-title">Information</div>
+					<div class="content">
+						<div class="text">
+							<h2>AlexG , Amiens, France. </h2>
+<p>Avec une formation informatique et développement, j'aime que mon code soit propre, clair et compréhensible par tous.<br>
+	 
+	J'ai passé plusieurs certifications comme PHP, MySQL et bootstrap *Openclassroom, par la suite je vise la certification symfony.</p>
+						</div>
+						<div class="social">
+ 															<a href="https://twitter.com/alexgwebdev" rel='no_follow' target="_blank">Twitter</a>
+															 <a href="https://github.com/alexg-developpeurweb/" rel='no_follow' target="_blank">GitHub</a>
+															  
+ 													</div>
+					</div>
+				</section>
+
+				<!--<div class="definition">
+						 
+					  </div>-->
+ 
+
+
+			</div>
+		</div>
+	
+
+
+
+		</main>
+	</div>
+
+	 
+		
+<script src="public/js/app.min.js"></script></body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+/* Please ❤ this if you like it! */
+
+
+(function($) { "use strict";
+		
+	//Page cursors
+
+    document.getElementsByTagName("body")[0].addEventListener("mousemove", function(n) {
+        t.style.left = n.clientX + "px", 
+		t.style.top = n.clientY + "px", 
+		e.style.left = n.clientX + "px", 
+		e.style.top = n.clientY + "px", 
+		i.style.left = n.clientX + "px", 
+		i.style.top = n.clientY + "px"
+    });
+    var t = document.getElementById("cursor"),
+        e = document.getElementById("cursor2"),
+        i = document.getElementById("cursor3");
+    function n(t) {
+        e.classList.add("hover"), i.classList.add("hover")
+    }
+    function s(t) {
+        e.classList.remove("hover"), i.classList.remove("hover")
+    }
+    s();
+    for (var r = document.querySelectorAll(".hover-target"), a = r.length - 1; a >= 0; a--) {
+        o(r[a])
+    }
+    function o(t) {
+        t.addEventListener("mouseover", n), t.addEventListener("mouseout", s)
+    }
+	
+	//Navigation
+ 
+
+	
+	//Switch light/dark
+	
+	$("#switch").on('click', function () {
+		if ($("body").hasClass("light")) {
+			$("body").removeClass("light");
+			$("#switch").removeClass("switched");
+		}
+		else {
+			$("body").addClass("light");
+			$("#switch").addClass("switched");
+		}
+	});
+	
+})(jQuery); 	
+	</script>
+
+<script>
+(function(obj){
+  var social_media = obj.socialMedia;
+  var gravatar_url = obj.avatarUrl;
+  var main_text = obj.message;
+  var styles = obj.style;
+  var iconSize = 50;
+  
+  var loadStyle = function() {
+    var styleEl = document.createElement('style');
+    var head = document.querySelector('head');
+    styleEl.appendChild(document.createTextNode(styles));
+    head.appendChild(styleEl);
+  };
+  
+  // Let's do this before anything else runs.
+  // Prevents flashes of unstyled content
+  loadStyle();
+  
+  // Preload the image, return the URL for kicks and giggles
+  var loadGravatar = function() {
+    var gravatarImage = new Image;
+    gravatarImage.src = gravatar_url;
+    return gravatar_url;
+  };
+  
+  // Utility function to change CSS of a node using an object
+  // of properties and values
+  var applyStyles = function(el, styles) {
+    Object.keys(styles).forEach(function(property) {
+      el.style[property] = styles[property];
+    });
+  };
+  
+  // Primary Container
+  var container = document.createElement('div');
+      container.className = 'co-container';
+  
+  // Primary Interactive Anchor
+  var primaryA = document.createElement('a');
+  
+  // Avatar Image
+  var img = document.createElement('img');
+      img.src = loadGravatar();
+      img.className = 'co-gravatar';
+  
+  // Put the image inside of the anchor tag
+  primaryA.appendChild(img);
+  
+  // Content things!
+  var p = document.createElement('p');
+      applyStyles(p, {
+        opacity: '0',
+        textAlign: 'center',
+      });
+      p.innerHTML = main_text;
+
+  
+  var ul = document.createElement('ul');
+      applyStyles(ul, {
+        opacity: '0',
+        display: 'flex',
+        listStyle: 'none',
+        padding: '0',
+        flexFlow: 'row wrap',
+      });
+  
+  // Build our Social Media link list
+  social_media.forEach(function(sm) {
+    var li = document.createElement('li');
+        applyStyles(
+          li,
+          {
+            flex: '1 0 50%'
+          }
+        );
+    var a = document.createElement('a');
+        a.rel = 'nofollow noreferrer noopener';
+        a.target = '_blank';
+        a.href = sm.url;
+        a.innerHTML = sm.name;
+    
+    // Append and conquer
+    li.appendChild(a);
+    ul.appendChild(li);
+  });
+  
+  // Let's put it all in our container in order
+  container.appendChild(primaryA);
+  container.appendChild(p);
+  container.appendChild(ul);
+  
+  // Finally, toss that sucker in the body
+  document.querySelector('body').appendChild(container);
+  
+  /* Animation Section */
+  var step;
+  var startingPos = 20;
+  var maxPos = 100;
+  var pos = startingPos; // We're not starting from zero.
+  
+  // Animation Execution
+  function animate(msFrameRate, reverse, cb) {
+    // Let's do that step.
+    step = setInterval(function(){
+      // First, adjust the anticipated position
+      pos = (reverse) ? pos - 1 : pos + 1;
+      // Check to see if we're at either end
+        console.log( { pos });
+      if( ( pos === maxPos ) || ( pos === startingPos ) ) {
+        // If so, stop what we're doing!
+        clearInterval(step);
+      } else {
+        // Otherwise, continue the animation with the new position
+        cb(pos, reverse); 
+      }
+    }, msFrameRate);
+  }
+  
+  // Animation definition
+  function cardAnimation(pos, reverse) {
+    
+    // Main Container
+    applyStyles(
+      container,
+      {
+        height: ( pos * 2.3 ) + 'px',
+        width: ( pos * 2 ) + 'px',
+        bottom: ( 20 - ( pos * 0.2 ) ) + 'px',
+        right: ( 20 - ( pos * 0.2 ) ) + 'px',
+        borderRadius: ( 52 - ( pos * 0.5 ) )  + '%',
+        overflow: 'visible',
+        padding: (pos*0.1) + 'px',
+      }
+    );
+    
+    // Don't make it too large when expanding
+    var imageScale = ( ( 20 + pos * 0.5 ) < 70 ) ? ( 20 + pos * 0.5 ) : 70;
+    // Don't make it too small when shrinking
+    if(reverse)
+        imageScale = (imageScale > 50) ? imageScale : 50;
+    
+    // Avatar
+    applyStyles(
+      img,
+      {
+        border: '4px solid #fff',
+        boxShadow: '1px 1px 2px 1px #9f9f9f',
+        marginTop: (pos * -0.4) + 'px',
+        position: 'relative',
+        left: 'calc( 50% - ' + ( imageScale * 0.6 ) + 'px)',
+        height: imageScale + 'px',
+        width: imageScale + 'px'
+      }
+    );
+    
+    // This fades in the text and links
+    if( pos > (maxPos-5) ) {
+      setTimeout(function() {
+        p.style.opacity = 1;
+        ul.style.opacity = 1
+      }, 5);
+    }
+    
+    // This fades out the text and links
+    if ( pos < (maxPos-1) ) {
+      p.style.opacity = 0;
+      ul.style.opacity = 0;
+    }
+
+    // This removes the `style` attribute
+    // which resets the array of elements
+    // to their default setting
+    if(reverse && pos === ( startingPos + 1 ) ) {
+      [
+        container,
+        img
+      ].forEach(function(el){
+        el.removeAttribute('style');
+      });
+    }
+  }
+  
+  function eventHandler(e) {
+    clearInterval(step);
+    animate(1, pos === maxPos, cardAnimation);
+  }
+  
+  // Desktop Listeners
+  container.addEventListener('mouseenter', eventHandler);
+  container.addEventListener('mouseleave', eventHandler);
+  
+  // Mobile Listener
+  primaryA.addEventListener('touchstart', function(e){
+    e.preventDefault();
+    eventHandler();
+  });
+  
+})(
+  {
+    avatarUrl: 'https://pbs.twimg.com/profile_images/1176492647793549312/ja3rigRv_400x400.png',
+    message: 'Bonjour, je suis AlexG<br> Développeur web',
+    socialMedia: [
+       
+      {
+        name: 'Twitter',
+        url: 'https://twitter.com/alexgwebdev'
+      },
+      {
+        name: 'GitHub',
+        url: 'https://github.com/alexg-developpeurweb/'
+      }
+    ],
+    style: ".co-container {display:none;\n border-radius: 50%;\n height: 50px;\n width: 50px;\n overflow: hidden;\n border: 2px solid #fff;\n box-shadow: 1px 1px 2px 1px #9f9f9f;\n -webkit-transform: all 300ms linear;\n transform: all 300ms linear;\n background-color: #fafafa;\n position: fixed;\n bottom: 20px;\n right: 20px;\n white-space: nowrap;\n -webkit-user-select: none;\n -moz-user-select: none;\n -ms-user-select: none;\n user-select: none;\n padding: 0;\n color: #212121;\n}\n.co-container:hover {\n border: 3px solid #eee;\n box-shadow: none;\n}\n.co-container img.co-gravatar {\n border-radius: 50%;\n height: 50px;\n width: 50px;\n display: block;\n}\n.co-container p,\n.co-container ul {\n transition: opacity 100ms linear;\n}\n.co-container ul a {\n display: block;\n padding: 8px 0;\n text-align: center;\n text-decoration: none;\n box-sizing: border-box;\n border: 1px solid transparent;\n color: #145a89;\n}\n.co-container ul a:hover {\n box-sizing: border-box;\n background-color: rgba(20, 90, 137, 0.1);\n border: 1px solid #a1d1f1;\n}"
+  }
+);
+</script>
+ </html>
