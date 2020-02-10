@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+ 
 <head>
-  <meta charset="utf-8" />
+		
+		<meta charset="utf-8" />
 		<title>AlexG - Développeur web</title>
 		<meta name="Description" content="Développeur web, certifié #PHP, #MySQL, #Bootstrap. Spécialisé dans la création d'application web, intranet..">
 		<META name="Keywords" content="developpeur, web , PHP , MySQL, Amiens, code, developer, Application">
@@ -18,666 +20,634 @@
 
 		<link rel="home" href="index.html" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <link rel='stylesheet' href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'><link rel="stylesheet" href="./style.css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-<style>
-  /*--Header--*/
-  header {
-    background: linear-gradient(to bottom, #e6e6e6 0%, #a3a3a3 100%);
-    display: block;
-    font-size: 0.9em;
-    height: 1.3em;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  header ul {
-    margin: 0 5px;
-    padding: 0 3px;
-  }
-  
-  header li {
-    display: inline-block;
-    line-height: 1.3em;
-    padding: 0 0.5em;
-    position: relative;
-    cursor: default;
-  }
-  
-  header .left {
-    float: left;
-  }
-  
-  header .right {
-    float: right;
-  }
-  
-  a {
-    color: #000;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  header .selected {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5978f5), color-stop(100%, #335ef6));
-    color: #fff;
-    border-bottom: 0.1em solid #5978F5;
-  }
-  
-  /*--Menus--*/
-  .visible {
-    display: block !important;
-  }
-  
-  .shortcut:after {
-    content: attr(shortcut);
-    float: right;
-    padding-right: 20px;
-  }
-  
-  .search {
-    padding: 5px 10px !important;
-  }
-  
-  .noChoice {
-    color: #adadad;
-  }
-  .noChoice:hover {
-    background: #fff !important;
-    color: #adadad !important;
-  }
-  
-  #volume-icon-li {
-    width: 1em;
-  }
-  
-  .submenu {
-    display: none;
-  }
-  .submenu input[type="text"] {
-    border-radius: 2em;
-    border: 1px solid #333;
-    height: 2em;
-    padding: 0 10px;
-  }
-  .submenu input[type="range"] {
-    transform: rotate(-90deg);
-    margin-left: -50px;
-    margin-top: 65px;
-  }
-  .submenu ul {
-    background: #fff;
-    border-radius: 0 0 5px 5px;
-    color: #333;
-    font-size: 14px;
-    left: 0px;
-    margin: 0 !important;
-    overflow: hidden;
-    padding: 0 5px 0 0;
-    position: absolute;
-    top: 1.3em;
-    width: auto;
-    white-space: nowrap;
-  }
-  .submenu ul.volume {
-    height: 10em;
-    width: 2em;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    overflow: visible;
-  }
-  .submenu ul.volume li {
-    margin: 0;
-    padding: 0;
-  }
-  .submenu ul li {
-    display: block !important;
-    vertical-align: middle;
-    float: none;
-    margin-right: 75px;
-    font-weight: 400;
-    padding: 2.5px 0px 2.5px 15px;
-    width: 100%;
-  }
-  .submenu ul li.spacer {
-    background: rgba(211, 211, 211, 0.8);
-    height: 1px !important;
-    margin: 2px 0;
-    padding: 0;
-    width: 102%;
-    position: relative;
-  }
-  .submenu ul li.spacer:hover {
-    background: rgba(211, 211, 211, 0.8);
-  }
-  .submenu li:hover:not(.volume) {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5978f5), color-stop(100%, #335ef6));
-    color: #fff;
-  }
-  .submenu .hasSubMenu:after {
-    content: "\f04b";
-     
-    font-size: 0.8em;
-    display: inline-block;
-    position: absolute;
-    right: 25px;
-  }
-  
-  /*--Desktop--*/
-  #Desktop {
-      /*-moz-column-count: 15;
-      -moz-column-gap: 10px;
-      -webkit-column-count: 15;
-      -webkit-column-gap: 10px;
-      -webkit-column-width: 80px;
-      column-count: 15;
-      column-gap: 10px;
-      column-width: 80px;
-      column-fill: balance;
-    -moz-column-fill: balance;
-    -webkit-column-fill: balance;
-      direction: rtl;*/
-    display: flex;
-    align-content: right;
-    flex-direction: column;
-    align-items: flex-end;
-    height: 85vh;
-    padding: 25px;
-    position: absolute;
-    right: 0 !important;
-    text-align: right;
-    z-index: -1;
-    width: 100%;
-  }
-  
-  #Desktop span.icon {
-    display: block;
-    float: right;
-    margin: 5px 0;
-    transition: all 0.2s;
-    width: auto;
-    z-index: 1;
-    text-align: center;
-  }
-  #Desktop span.icon:after {
-    color: #fff;
-    content: attr(data-title);
-    display: block;
-    margin-bottom: 10px;
-    padding: 1px 5px;
-    text-shadow: 0px 0px 4px #000;
-    transition: all 0.2s;
-  }
-  
-  #Desktop span.icon img {
-    border: 2px solid rgba(225, 225, 225, 0);
-    border-radius: 6px;
-    transition: all 0.2s;
-    width: 75px;
-  }
-  
-  .focus img {
-    border: 2px solid rgba(225, 225, 225, 0.5) !important;
-    border-radius: 6px;
-  }
-  
-  span.focus:after {
-    background: #146ece;
-    border-radius: 15px;
-    text-shadow: none !important;
-  }
-  
-  /*--Dock--*/
-  footer {
-    bottom: 0;
-    display: inline-block;
-    height: 4.4em;
-    left: 50%;
-    min-width: 35em;
-    padding: 0 10px;
-    perspective: 1000px;
-    position: absolute;
-    text-align: center;
-    transform: translatex(-50%);
-  }
-  footer:before {
-    background: linear-gradient(to top, #e6e6e6 0%, #a3a3a3 100%);
-    bottom: 0;
-    content: '';
-    height: 4em;
-    left: 0;
-    margin-top: 15px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transform: rotatex(45deg);
-    width: 100%;
-    z-index: -1;
-  }
-  
-  footer ul {
-    display: inline-block;
-    margin: 0 0.1em;
-    padding: 0;
-    transform-origin: bottom center !important;
-  }
-  
-  footer li {
-    display: inline-block;
-    vertical-align: top;
-    position: relative;
-    transform: scale(1);
-    transform-origin: bottom center;
-    transition: transform 2s;
-  }
-  footer li:before {
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 12px;
-    color: #fff;
-    content: attr(data-title);
-    display: block;
-    float: left;
-    font-size: 0.9em;
-    left: 50%;
-    margin: 2px auto;
-    opacity: 0;
-    padding: 0 10px;
-    position: absolute;
-    text-align: center;
-    top: -35px;
-    transform: translatex(-50%);
-    transform-origin: bottom center !important;
-    visibility: hidden;
-    width: auto;
-  }
-  footer li:hover:before {
-    opacity: 1;
-    top: -45px;
-    visibility: visible;
-  }
-  
-  .jump {
-    -webkit-animation: JUMP 600ms 2 cubic-bezier(0.4, 0.01, 0.6, 0.99);
-  }
-  
-  footer img {
-    -webkit-box-reflect: below -5px -webkit-gradient(linear, left bottom, left top, color-stop(0%, rgba(230, 230, 230, 0.2)), color-stop(100%, rgba(255, 255, 255, 0)));
-    align-items: center;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    margin: 0 5px;
-    position: relative;
-    transform: scale(1);
-    transform-origin: bottom center !important;
-    transition: all 0.2s;
-    width: 4em;
-  }
-  footer img:hover {
-    margin: 0 10px;
-    transform: scale(1.2);
-  }
-  
-  @-webkit-keyframes JUMP {
-    0% {
-      bottom: 0;
-    }
-    50% {
-      bottom: 20px;
-      padding-bottom: 20px;
-    }
-    100% {
-      bottom: 0;
-    }
-  }
-  
-  .osx {
-  float: left; clear: both;
-  margin: 0 10px 19px 0;
+
+
+									
+		<link href="public/css/main.min.css" rel="stylesheet">
+
+		<style>
+
+			
+body{
+ 
+	background-color: #ffff;
+	 
+}
+a {
+	cursor: pointer;
+}
+a:hover {
+	text-decoration: none;
 }
 
-#ok, #apple, #help, #input, #div, #a, #bold {
-clear:none;
+	/*	
+.cursor,
+.cursor2,
+.cursor3{
+	position: fixed;
+	border-radius: 50%;	
+	transform: translateX(-50%) translateY(-50%);
+	pointer-events: none;
+	left: -100px;
+	top: 50%;
+	mix-blend-mode: difference;
+	-webkit-transition: all 300ms linear;
+	transition: all 300ms linear;
+}
+.cursor{
+	background-color: #fff;
+	height: 0;
+	width: 0;
+	z-index: 99999;
+}
+.cursor2,.cursor3{
+	height: 36px;
+	width: 36px;
+	z-index:99998;
+	-webkit-transition:all 0.3s ease-out;
+	transition:all 0.3s ease-out
+}
+.cursor2.hover,
+.cursor3.hover{
+	-webkit-transform:scale(2) translateX(-25%) translateY(-25%);
+	transform:scale(2) translateX(-25%) translateY(-25%);
+	border:none
+}
+.cursor2{
+	border: 2px solid #fff;
+	box-shadow: 0 0 22px rgba(255, 255, 255, 0.6);
+}
+.cursor2.hover{
+	background: rgba(255,255,255,1);
+	box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
 }
 
-/* CSS for Buttons */
+@media screen and (max-width: 1200px){
+	.cursor,.cursor2,.cursor3{
+		display: none
+	}
+}
 
-.osx, .osx:hover {
+@media screen and (max-width: 600px){
+	.switch-wrap{
+		display: none
+	}
+}
+*/
+.switch-wrap {
+	position: absolute;
+	top: 5%;
+	right: 0;
+	z-index: 10;
+    transform: translateY(-50%);
+	width: 10%;
+	-webkit-transition: all 500ms linear;
+	transition: all 500ms linear; 
+	margin: 0 auto;
+	text-align: center;
+	 
+}
+.switch-wrap h1 {
+	font-weight: 900;
+	font-size: 46px;
+	line-height: 1;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 40px;
+	-webkit-transition: all 300ms linear;
+	transition: all 300ms linear; 
+}
+@media screen and (max-width: 580px){
+  .switch-wrap h1 {
+    font-size: 32px;
+  }
+}
+.switch-wrap p {
+	font-weight: 600;
+	font-size: 14px;
+	letter-spacing: 1px;
+	line-height: 1;
+	color: #000;
+	text-align: center;
+	margin-top: 15px;
+}
+.switch-wrap p span {
+	position: relative;
+}
+.switch-wrap p span:before {
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 2px;
+	background-color: #fff;
+	left: 0;
+	bottom: -4px;
+	-webkit-transition: all 300ms linear;
+	transition: all 300ms linear; 
+}
+.switch-wrap p span:nth-child(2):before {
+	opacity: 0;
+}
+#switch,
+#circle {
+	cursor: pointer;
+	-webkit-transition: all 300ms linear;
+	transition: all 300ms linear; 
+} 
+#switch {
+	width: 60px;
+	height: 8px;
+	margin: 0 auto;
+	text-align: center;
+	border: 2px solid #000;
+	border-radius: 27px;
+	background: #000;
+	position: relative;
+	display: inline-block;
+}
+#circle {
+	position: absolute;
+	top: -11px;
+	left: -13px;
+	width: 26px;
+	height: 26px;
+	border-radius: 50%;
+	box-shadow: 0 4px 4px rgba(26,53,71,0.25), 0 0 0 1px rgba(26,53,71,0.07);
+	background: #000;
+}
+.switched {
+	border-color: #fff !important;
+	background: #fff !important;
+}
+.switched #circle {
+	left: 43px;
+	background: #fff;
+}
 
-  color: #000; text-decoration: none; text-shadow: 0 1px rgba(255,255,255,.2);
-   font:  400 13px/19px "Helvetica Neue", Arial, sans-serif;
+/* #Light
+================================================== */
 
--webkit-tap-highlight-color: transparent;
+body.light{
+	background-color: #1f2029;
+}
+body.light .cursor,
+body.light .cursor2,
+body.light .cursor3{
+	mix-blend-mode: normal;
+}
+body.light .cursor2{
+	border: 2px solid #fff;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+body.light .cursor2.hover{
+	background: rgba(255, 255, 255, 0.06);
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+	border-color: transparent;
+}
+body.light .logo-wrap a {
+	color: #fff;
+}
+body.light h1{
+	color: #fff;
+}
+body.light h2{
+	color: #fff;
+}
+body.light p{
+	color: rgb(194, 194, 194);
+}
+body.light .menu-icon__line {
+	background-color: #fff;
+}
+body.light .nav:before {
+	background: rgba(235, 235, 235,0.6);
+}
+body.light .nav:after {
+	background: rgba(250,250,250,1);
+}
+body.light .nav__list-item a{ 
+	color: rgba(255, 255, 255, 0.6); 
+}
+body.light .nav__list-item a:hover{
+	color: #fff;
+}
+body.light .nav__list-item.active-nav a{
+	color: #fff;
+}
+body.light .switch-wrap h1 {
+	color: #fff;
+}
+body.light .switch-wrap p span:nth-child(2):before {
+	opacity: 1;
+	background-color: #fff;
+}
+body.light .switch-wrap p span:nth-child(1):before {
+	opacity: 0;
+}
 
-  padding: 0 12px;
+ 
+		
+		</style>
+
+	</head>
+<body data-state='homepage' class='homepage loading'>
+
+		<!-- Cursor -->
+		<div class='cursor' id="cursor"></div>
+		<div class='cursor2' id="cursor2"></div>
+		<div class='cursor3' id="cursor3"></div>
+
+		<!-- switcher theme -->
+		<div style="  float:right">	
+				<div class="switch-wrap">
+					<div id="switch" class="hover-target">
+						<div id="circle"></div>
+					</div>
+					<!-- <p><span>☀️</span> - <span>🌙</span></p> -->
+				</div>
+			</div>	
+
+
+
+		<div id="universe">
+		<main id="content" role="main">
+    		<div class="page-header">
+			<div class="content">
+				<h1>AlexG Développeur web</h1>
+				<p class="sub-header">
+					Développeur web, certifié #PHP, #MySQL, #Bootstrap*.  
+				</p>
+			</div>
+		</div>	
+		<div class="fake-holder">
+			
+			<div class="affix">
+				<section class="project-section">
+					<div class="section-title">Selected Work</div>
+				 
+							<div class="projects clear">
+
+
+									<div class="project black" style="background-color: #dfe1f4">
+											<a href="app_center_developer/changelog.html" target="_blank" rel="no_follow"></a>
+											<img class="product full" src="images/large/acd.png" />
+											
+											<div class="text">
+												<h3 >App Center Developer</h3>
+												<p class="motto">Dashboard gestion des projets sur votre localhost + gestion Git .</p>
+											</div>
+											<div class="services">
+												#PHP #VueJS <br>Bêta</div>
+										</div>	
+
+									<div class="project black" style="background-color: #f3e7e0">
+											<!-- <a href="#" target="_blank" rel="no_follow"></a> -->
+											<img class="product full" src="images/large/deviseur.png" />
+											
+											<div class="text">
+												<h3 >Deviseur</h3>
+												<p class="motto">Application deviseur de Maison Individuel Simulation Tarifaire Automatique.</p>
+											</div>
+											<div class="services">
+												#PHP #VueJS #MySQL<br>En cours de développement</div>
+										</div>					 
+													
+
+									<div class="project black" style="background-color: #f0ffea">
+											<!-- <a href="#" target="_blank" rel="no_follow"></a> -->
+											<img class="product full" src="images/large/calendar.png" />
+											
+											<div class="text">
+												<h3 >Calendrier</h3>
+												<p class="motto">Application de gestion de planning.</p>
+											</div>
+											<div class="services">
+												#PHP #VueJS<br>En production</div>
+										</div>
+											 
+										<div class="project black" style="background-color: #eaf8ff">
+											<!-- <a href="#" target="_blank" rel="no_follow"></a> -->
+											<img class="product full" src="images/large/schema_db.png" />
+											
+											<div class="text">
+												<h3 >Schéma base de donnée</h3>
+												<p class="motto">Créer un schéma de votre base de donnée facilement.</p>
+											</div>
+											<div class="services">
+												 #VueJS<br>En production<br><a href="https://inspiredb.github.io/">Site web</a></div>
+										</div>
+
+
+												 
+											</div>
+				</section>
+
+				<section class="bio">
+					<div class="section-title">Information</div>
+					<div class="content">
+						<div class="text">
+							<h2>AlexG , Amiens, France. </h2>
+<p>Avec une formation informatique et développement, j'aime que mon code soit propre, clair et compréhensible par tous.<br>
+	 
+	J'ai passé plusieurs certifications comme PHP, MySQL et bootstrap *Openclassroom, par la suite je vise la certification symfony.</p>
+						</div>
+						<div class="social">
+ 															<a href="https://twitter.com/alexgwebdev" rel='no_follow' target="_blank">Twitter</a>
+															 <a href="https://github.com/alexg-developpeurweb/" rel='no_follow' target="_blank">GitHub</a>
+															  
+ 													</div>
+					</div>
+				</section>
+
+				<!--<div class="definition">
+						 
+					  </div>-->
+ 
+
+
+			</div>
+		</div>
+	
+
+
+
+		</main>
+	</div>
+
+	 
+		
+<script src="public/js/app.min.js"></script></body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+/* Please ❤ this if you like it! */
+
+
+(function($) { "use strict";
+		
+	//Page cursors
+
+    document.getElementsByTagName("body")[0].addEventListener("mousemove", function(n) {
+        t.style.left = n.clientX + "px", 
+		t.style.top = n.clientY + "px", 
+		e.style.left = n.clientX + "px", 
+		e.style.top = n.clientY + "px", 
+		i.style.left = n.clientX + "px", 
+		i.style.top = n.clientY + "px"
+    });
+    var t = document.getElementById("cursor"),
+        e = document.getElementById("cursor2"),
+        i = document.getElementById("cursor3");
+    function n(t) {
+        e.classList.add("hover"), i.classList.add("hover")
+    }
+    function s(t) {
+        e.classList.remove("hover"), i.classList.remove("hover")
+    }
+    s();
+    for (var r = document.querySelectorAll(".hover-target"), a = r.length - 1; a >= 0; a--) {
+        o(r[a])
+    }
+    function o(t) {
+        t.addEventListener("mouseover", n), t.addEventListener("mouseout", s)
+    }
+	
+	//Navigation
+ 
+
+	
+	//Switch light/dark
+	
+	$("#switch").on('click', function () {
+		if ($("body").hasClass("light")) {
+			$("body").removeClass("light");
+			$("#switch").removeClass("switched");
+		}
+		else {
+			$("body").addClass("light");
+			$("#switch").addClass("switched");
+		}
+	});
+	
+})(jQuery); 	
+	</script>
+
+<script>
+(function(obj){
+  var social_media = obj.socialMedia;
+  var gravatar_url = obj.avatarUrl;
+  var main_text = obj.message;
+  var styles = obj.style;
+  var iconSize = 50;
+  
+  var loadStyle = function() {
+    var styleEl = document.createElement('style');
+    var head = document.querySelector('head');
+    styleEl.appendChild(document.createTextNode(styles));
+    head.appendChild(styleEl);
+  };
+  
+  // Let's do this before anything else runs.
+  // Prevents flashes of unstyled content
+  loadStyle();
+  
+  // Preload the image, return the URL for kicks and giggles
+  var loadGravatar = function() {
+    var gravatarImage = new Image;
+    gravatarImage.src = gravatar_url;
+    return gravatar_url;
+  };
+  
+  // Utility function to change CSS of a node using an object
+  // of properties and values
+  var applyStyles = function(el, styles) {
+    Object.keys(styles).forEach(function(property) {
+      el.style[property] = styles[property];
+    });
+  };
+  
+  // Primary Container
+  var container = document.createElement('div');
+      container.className = 'co-container';
+  
+  // Primary Interactive Anchor
+  var primaryA = document.createElement('a');
+  
+  // Avatar Image
+  var img = document.createElement('img');
+      img.src = loadGravatar();
+      img.className = 'co-gravatar';
+  
+  // Put the image inside of the anchor tag
+  primaryA.appendChild(img);
+  
+  // Content things!
+  var p = document.createElement('p');
+      applyStyles(p, {
+        opacity: '0',
+        textAlign: 'center',
+      });
+      p.innerHTML = main_text;
+
+  
+  var ul = document.createElement('ul');
+      applyStyles(ul, {
+        opacity: '0',
+        display: 'flex',
+        listStyle: 'none',
+        padding: '0',
+        flexFlow: 'row wrap',
+      });
+  
+  // Build our Social Media link list
+  social_media.forEach(function(sm) {
+    var li = document.createElement('li');
+        applyStyles(
+          li,
+          {
+            flex: '1 0 50%'
+          }
+        );
+    var a = document.createElement('a');
+        a.rel = 'nofollow noreferrer noopener';
+        a.target = '_blank';
+        a.href = sm.url;
+        a.innerHTML = sm.name;
     
-  border: 1px solid;
-  border-top-color: #9d9d9d; border-bottom-color: #939393;
-  border-left-color: #949494; border-right-color: #949494;
-
-  -webkit-border-radius: 4px;   box-shadow: 0 1px rgba(0,0,0,0.1);
-  -moz-border-radius: 4px; -moz-box-shadow: 0 1px rgba(0,0,0,0.1);
-  border-radius: 4px;   -webkit-box-shadow: 0 1px rgba(0,0,0,0.1);
+    // Append and conquer
+    li.appendChild(a);
+    ul.appendChild(li);
+  });
+  
+  // Let's put it all in our container in order
+  container.appendChild(primaryA);
+  container.appendChild(p);
+  container.appendChild(ul);
+  
+  // Finally, toss that sucker in the body
+  document.querySelector('body').appendChild(container);
+  
+  /* Animation Section */
+  var step;
+  var startingPos = 20;
+  var maxPos = 100;
+  var pos = startingPos; // We're not starting from zero.
+  
+  // Animation Execution
+  function animate(msFrameRate, reverse, cb) {
+    // Let's do that step.
+    step = setInterval(function(){
+      // First, adjust the anticipated position
+      pos = (reverse) ? pos - 1 : pos + 1;
+      // Check to see if we're at either end
+        console.log( { pos });
+      if( ( pos === maxPos ) || ( pos === startingPos ) ) {
+        // If so, stop what we're doing!
+        clearInterval(step);
+      } else {
+        // Otherwise, continue the animation with the new position
+        cb(pos, reverse); 
+      }
+    }, msFrameRate);
+  }
+  
+  // Animation definition
+  function cardAnimation(pos, reverse) {
     
-  -webkit-appearance: none;
+    // Main Container
+    applyStyles(
+      container,
+      {
+        height: ( pos * 2.3 ) + 'px',
+        width: ( pos * 2 ) + 'px',
+        bottom: ( 20 - ( pos * 0.2 ) ) + 'px',
+        right: ( 20 - ( pos * 0.2 ) ) + 'px',
+        borderRadius: ( 52 - ( pos * 0.5 ) )  + '%',
+        overflow: 'visible',
+        padding: (pos*0.1) + 'px',
+      }
+    );
+    
+    // Don't make it too large when expanding
+    var imageScale = ( ( 20 + pos * 0.5 ) < 70 ) ? ( 20 + pos * 0.5 ) : 70;
+    // Don't make it too small when shrinking
+    if(reverse)
+        imageScale = (imageScale > 50) ? imageScale : 50;
+    
+    // Avatar
+    applyStyles(
+      img,
+      {
+        border: '4px solid #fff',
+        boxShadow: '1px 1px 2px 1px #9f9f9f',
+        marginTop: (pos * -0.4) + 'px',
+        position: 'relative',
+        left: 'calc( 50% - ' + ( imageScale * 0.6 ) + 'px)',
+        height: imageScale + 'px',
+        width: imageScale + 'px'
+      }
+    );
+    
+    // This fades in the text and links
+    if( pos > (maxPos-5) ) {
+      setTimeout(function() {
+        p.style.opacity = 1;
+        ul.style.opacity = 1
+      }, 5);
+    }
+    
+    // This fades out the text and links
+    if ( pos < (maxPos-1) ) {
+      p.style.opacity = 0;
+      ul.style.opacity = 0;
+    }
 
-  background: #ffffff; /* Old browsers */
-
-  background: -webkit-gradient(linear, left top, left bottom, 
-             /* Chrome, */     color-stop( 0%, #ffffff),
-             /* Safari4+ */                 color-stop(25%, #ffffff),       
-                                                        color-stop( 30%, #fcfcfc), 
-                                                                       color-stop(35%, #f9f9f9),            
-                               color-stop(40%, #f7f7f7),    
-                                            color-stop(45%, #f5f5f5),         
-                                                        color-stop( 50%, #f2f2f2), 
-                                                                       color-stop(50%, #ececec),                 
-                               color-stop(80%, #ededed),
-                                            color-stop(95%, #efefef),
-                                                        color-stop(100%, #f2f2f2)); 
-  background: -webkit-linear-gradient(top,     #ffffff  0%, #ffffff 25%, #fcfcfc  30%, #f9f9f9 35%,
-               /* Chrome10+, */                #f7f7f7 40%, #f5f5f5 45%, #f2f2f2  50%, #ececec 50%,
-               /* Safari5.1+ */                #ededed 80%, #efefef 95%, #f2f2f2 100%);
-  background: -moz-linear-gradient(top,        #ffffff  0%, #ffffff 25%, #fcfcfc  30%, #f9f9f9 35%, 
-               /* FF3.6+ */                    #f7f7f7 40%, #f5f5f5 45%, #f2f2f2  50%, #ececec 50%,
-                                               #ededed 80%, #efefef 95%, #f2f2f2 100%); 
-  background: -o-linear-gradient(top,          #ffffff  0%, #ffffff 25%, #fcfcfc  30%, #f9f9f9 35%,
-               /* Opera 11.10+ */              #f7f7f7 40%, #f5f5f5 45%, #f2f2f2  50%, #ececec 50%,
-                                               #ededed 80%, #efefef 95%, #f2f2f2 100%); 
-  background: -ms-linear-gradient(top,         #ffffff  0%, #ffffff 25%, #fcfcfc  30%, #f9f9f9 35%,
-               /* IE10+ */                     #f7f7f7 40%, #f5f5f5 45%, #f2f2f2  50%, #ececec 50%,
-                                               #ededed 80%, #efefef 95%, #f2f2f2 100%);
-  background: linear-gradient(top,             #ffffff  0%, #ffffff 25%, #fcfcfc  30%, #f9f9f9 35%,
-              /* W3C */                        #f7f7f7 40%, #f5f5f5 45%, #f2f2f2  50%, #ececec 50%,
-                                               #ededed 80%, #efefef 95%, #f2f2f2 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( 
-          /* IE6-9 */           startColorstr='#ffffff',    endColorstr='#f2f2f2',GradientType=0 );
-
-    cursor: default; -webkit-user-select: none;
-    -moz-user-select: none;  user-select: none;
-
-}
-
-.osx:active, .osx.primary, .osx.primary:hover {
-  background: #bcd6ef; /* Old browsers */
-  background: -webkit-gradient(linear, left top, left bottom, 
-               /* Chrome,  */  color-stop( 0%, #bcd6ef), 
-               /* Safari4+ */               color-stop( 5%, #a3c1ef), 
-                                                        color-stop( 10%, #98b8e9), 
-                                                                       color-stop(15%, #91b3e9), 
-                               color-stop(20%, #8ab1e9), 
-                                            color-stop(25%, #8ab2ea), 
-                                                        color-stop( 30%, #83abe8), 
-                                                                       color-stop(35%, #7cabe9), 
-                               color-stop(40%, #73a6e8), 
-                                            color-stop(45%, #6ca4e9),
-                                                        color-stop( 50%, #67a1e9), 
-                                                                       color-stop(50%, #4693ea), 
-                               color-stop(70%, #579eec), 
-                                            color-stop(75%, #64a7ee), 
-                                                        color-stop( 80%, #6eaeee), 
-                                                                       color-stop(85%, #7db6ef), 
-                               color-stop(90%, #88bfef), 
-                                             olor-stop(95%, #97caef), 
-                                                        color-stop(100%, #abd4ef)); 
-  background: -webkit-linear-gradient(top,     #bcd6ef  0%, #a3c1ef  5%, #98b8e9  10%, #91b3e9 15%,
-               /* Chrome10+, */                #8ab1e9 20%, #8ab2ea 25%, #83abe8  30%, #7cabe9 35%,
-               /* Safari5.1+ */                #73a6e8 40%, #6ca4e9 45%, #67a1e9  50%, #4693ea 50%,
-                                               #579eec 70%, #64a7ee 75%, #6eaeee  80%, #7db6ef 85%,
-                                               #88bfef 90%, #97caef 95%, #abd4ef 100%); 
-  background: -moz-linear-gradient(top,        #bcd6ef  0%, #a3c1ef  5%, #98b8e9 10%, #91b3e9 15%, 
-               /* FF3.6+ */                    #8ab1e9 20%, #8ab2ea 25%, #83abe8 30%, #7cabe9 35%, 
-                                               #73a6e8 40%, #6ca4e9 45%, #67a1e9 50%, #4693ea 50%, 
-                                               #579eec 70%, #64a7ee 75%, #6eaeee 80%, #7db6ef 85%, 
-                                               #88bfef 90%, #97caef 95%, #abd4ef 100%);
-  background: -o-linear-gradient(top,          #bcd6ef  0%, #a3c1ef  5%, #98b8e9  10%, #91b3e9 15%,
-               /* Opera 11.10+ */              #8ab1e9 20%, #8ab2ea 25%, #83abe8  30%, #7cabe9 35%,
-                                               #73a6e8 40%, #6ca4e9 45%, #67a1e9  50%, #4693ea 50%,
-                                               #579eec 70%, #64a7ee 75%, #6eaeee  80%, #7db6ef 85%,
-                                               #88bfef 90%, #97caef 95%, #abd4ef 100%);
-  background: -ms-linear-gradient(top,         #bcd6ef  0%, #a3c1ef  5%, #98b8e9  10%, #91b3e9 15%,
-               /* IE10+ */                     #8ab1e9 20%, #8ab2ea 25%, #83abe8  30%, #7cabe9 35%,
-                                               #73a6e8 40%, #6ca4e9 45%, #67a1e9  50%, #4693ea 50%,
-                                               #579eec 70%, #64a7ee 75%, #6eaeee  80%, #7db6ef 85%,
-                                               #88bfef 90%, #97caef 95%, #abd4ef 100%);
-  background: linear-gradient(top,             #bcd6ef  0%, #a3c1ef  5%, #98b8e9  10%, #91b3e9 15%,
-              /* W3C */                        #8ab1e9 20%, #8ab2ea 25%, #83abe8  30%, #7cabe9 35%,
-                                               #73a6e8 40%, #6ca4e9 45%, #67a1e9  50%, #4693ea 50%,
-                                               #579eec 70%, #64a7ee 75%, #6eaeee  80%, #7db6ef 85%,
-                                               #88bfef 90%, #97caef 95%, #abd4ef 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(
-          /* IE6-9 */           startColorstr='#bcd6ef',    endColorstr='#abd4ef',GradientType=0 );
-
-    border-top-color: #5158ab; border-bottom-color: #464872;
-    border-left-color: #4b4d8c; border-right-color: #4b4d8c;
-
-}
-
-.osx.primary, .osx.primary:hover {
-    -webkit-animation: pulsate 730ms infinite alternate ease-in-out;
-       -moz-animation: pulsate 730ms infinite alternate ease-in-out;
-            animation: pulsate 730ms infinite alternate ease-in-out;
-}
-
-.osx.primary:active {
-          animation: none; 
-     -moz-animation: none;
-  -webkit-animation: none;
-}
-
-@-webkit-keyframes pulsate {
-   0% { -webkit-box-shadow: 0 1px rgba(0,0,0,0.1), inset 0 0 19px 2px #d2f7ff; box-shadow: 0 1px rgba(0,0,0,0.1), inset 0 0 19px 2px #d2f7ff; }
- 100% { -webkit-box-shadow: 0 1px rgba(0,0,0,0.1), inset 0 0 19px 0px #a0c1ed; box-shadow: 0 1px rgba(0,0,0,0.1), inset 0 0 19px 0px #a0c1ed; }
-}
-
-@-moz-keyframes pulsate {
-   0% { -moz-box-shadow: 0 1px rgba(0,0,0,0.1), inset 0 0 19px 2px #d2f7ff; box-shadow: 0 1px rgba(0,0,0,0.1), inset 0 0 19px 2px #d2f7ff; }
- 100% { -moz-box-shadow: 0 1px rgba(0,0,0,0.1), inset 0 0 19px 0px #a0c1ed; box-shadow: 0 1px rgba(0,0,0,0.1), inset 0 0 19px 0px #a0c1ed; }
-}
-
-@keyframes pulsate {
-   0% { box-shadow: 0 1px rgba(0,0,0,0.1), inset 0 0 19px 2px #d2f7ff; }
- 100% { box-shadow: 0 1px rgba(0,0,0,0.1), inset 0 0 19px 0px #a0c1ed; }
-}
-
-.osx:focus {
-  -webkit-box-shadow: 0 1px rgba(0,0,0,0.1), 0 0 4px hsl(204, 100%, 88%);
-     -moz-box-shadow: 0 1px rgba(0,0,0,0.1), 0 0 4px hsl(204, 100%, 88%);
-          box-shadow: 0 1px rgba(0,0,0,0.1), 0 0 4px hsl(204, 100%, 88%);
-        border-color: hsl(204, 68%, 58%);   
-}
-
-.osx.round {
-  -webkit-border-radius: 9999px;
-     -moz-border-radius: 9999px;
-          border-radius: 9999px;
-  padding: 0 10px;
-}
-
-.osx.single{
-    padding: 0 6px;
-}
-
-.osx b, .osx strong {
-  font-weight: 500;
-}
-
-.loader {
-
-position : fixed;
-z-index: 9999;
-background : url('icon-loader.gif') 50% 50% no-repeat;
-background-color:white;
-top : 0px;
-left : 0px;
-height : 100%;
-width : 100%;
-cursor : wait;
-}
-
-</style>
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<div class="loader" >
-  <center><img  src="https://cdn.dribbble.com/users/1676501/screenshots/5826016/apple_faceid.gif"></center>
-  </div>
-<header>
-  <ul class="left">
-      <li class="apple">
-          <i class="fa fa-apple"></i>
-           
-      </li>
-      <li><strong>AlexG développeur web</strong>
-          
-      </li>
-      
+    // This removes the `style` attribute
+    // which resets the array of elements
+    // to their default setting
+    if(reverse && pos === ( startingPos + 1 ) ) {
+      [
+        container,
+        img
+      ].forEach(function(el){
+        el.removeAttribute('style');
+      });
+    }
+  }
+  
+  function eventHandler(e) {
+    clearInterval(step);
+    animate(1, pos === maxPos, cardAnimation);
+  }
+  
+  // Desktop Listeners
+  container.addEventListener('mouseenter', eventHandler);
+  container.addEventListener('mouseleave', eventHandler);
+  
+  // Mobile Listener
+  primaryA.addEventListener('touchstart', function(e){
+    e.preventDefault();
+    eventHandler();
+  });
+  
+})(
+  {
+    avatarUrl: 'https://pbs.twimg.com/profile_images/1176492647793549312/ja3rigRv_400x400.png',
+    message: 'Bonjour, je suis AlexG<br> Développeur web',
+    socialMedia: [
        
-  </ul>
-   
-</header>
-
-<!--
-<div class="window_about">
-  <div class="top">
-
-
-
-
-
-    <div class="panel">
-     
-      <span class="first"></span>
-      <span class="second"></span>
-      <span class="third"></span>
-    </div>
-    <div class="nav">
-      <span class="prev active"><i class="fa fa-angle-left"></i></span>
-      <span class="next"><i class="fa fa-angle-right"></i></span>
-      <span class="set"><i class="fa fa-list-alt"></i></span>
-      
-      <span class="address_about">
-        <input type="text" value="alexg-developpeurweb.github.io/about" class="address"/ editable="true">
-        <i class="fa fa-refresh"></i>
-      </span>
-      
-
-    </div>
-    <div class="nav right">
-      <span class="share"><i class="fa fa-share-alt"></i></span>
-      <span class="tabs">
-        <span class="square front"></span>
-        <span class="square behind"></span>
-      </span>
-    </div>
-    
-    <span class="new">
-      <span class="plus x"></span>
-      <span class="plus y"></span>
-    </span>
- 
-  </div>
-  
-  <div  style="font-family: Arial, Helvetica, sans-serif;" class="inside">
-    
-     
-<h1>AlexG Développeur web</h1>
-<h3><i class="material-icons">
-  location_on
-  </i>Amiens, France</h3>
-<p>Développeur web, certifié #PHP, #MySQL, #Bootstrap*.</p>
- 
-<p>Avec une formation informatique et développement, j'aime que mon code sois propre, clair et compréhensible par tous.
- <br>
-J'ai passé plusieurs certifications comme PHP, MySQL et bootstrap sur *Openclassroom, par la suite je vise la certification symfony.</p>
-
- <a href="https://twitter.com/alexgwebdev" id="www" class="osx" target="_blank" >Twitter</a>
-<a href="https://github.com/alexg-developpeurweb/" id="www" class="osx" target="_blank" >GitHub</a>
-
-  </div>
-  
-</div>
--->
-
-
-<div class="window">
-  <div class="top">
-
-
-
-
-
-    <div class="panel">
-     
-      <span class="first"></span>
-      <span class="second"></span>
-      <span class="third"></span>
-    </div>
-    <div class="nav">
-      <span class="prev active"><i class="fa fa-angle-left"></i></span>
-      <span class="next"><i class="fa fa-angle-right"></i></span>
-      <span class="set"><i class="fa fa-list-alt"></i></span>
-      
-      <span class="address">
-        <input type="text" value="alexg-developpeurweb.github.io/work" class="address"/ editable="true">
-        <i class="fa fa-refresh"></i>
-      </span>
-      
-
-    </div>
-    <div class="nav right">
-      <span class="share"><i class="fa fa-share-alt"></i></span>
-      <span class="tabs">
-        <span class="square front"></span>
-        <span class="square behind"></span>
-      </span>
-    </div>
-    
-    <span class="new">
-      <span class="plus x"></span>
-      <span class="plus y"></span>
-    </span>
- 
-  </div>
-  
-  <div class="inside">
-    
-     <iframe style="width:100%;height:100%;border:none" src="index1.html"></iframe>
-    
-  </div>
-
-
-
-  <div  class="inside">
-    
-   
-    
-  </div>
-  
-</div>
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script><script  src="./script.js"></script>
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-<script type="text/javascript">
-$(window).load(function() {
-	$(".loader").fadeOut("10000");
-})
+      {
+        name: 'Twitter',
+        url: 'https://twitter.com/alexgwebdev'
+      },
+      {
+        name: 'GitHub',
+        url: 'https://github.com/alexg-developpeurweb/'
+      }
+    ],
+    style: ".co-container {display:none;\n border-radius: 50%;\n height: 50px;\n width: 50px;\n overflow: hidden;\n border: 2px solid #fff;\n box-shadow: 1px 1px 2px 1px #9f9f9f;\n -webkit-transform: all 300ms linear;\n transform: all 300ms linear;\n background-color: #fafafa;\n position: fixed;\n bottom: 20px;\n right: 20px;\n white-space: nowrap;\n -webkit-user-select: none;\n -moz-user-select: none;\n -ms-user-select: none;\n user-select: none;\n padding: 0;\n color: #212121;\n}\n.co-container:hover {\n border: 3px solid #eee;\n box-shadow: none;\n}\n.co-container img.co-gravatar {\n border-radius: 50%;\n height: 50px;\n width: 50px;\n display: block;\n}\n.co-container p,\n.co-container ul {\n transition: opacity 100ms linear;\n}\n.co-container ul a {\n display: block;\n padding: 8px 0;\n text-align: center;\n text-decoration: none;\n box-sizing: border-box;\n border: 1px solid transparent;\n color: #145a89;\n}\n.co-container ul a:hover {\n box-sizing: border-box;\n background-color: rgba(20, 90, 137, 0.1);\n border: 1px solid #a1d1f1;\n}"
+  }
+);
 </script>
-</body>
-</html>
+ </html>
